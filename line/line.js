@@ -1,5 +1,3 @@
-
-
 var margin = {top: 20, right: 0, bottom: 30, left: 50},
     now = Date.now(),
     pollInterval = 300000,
@@ -40,8 +38,6 @@ function imagify () {
 }
 
 function init() {
-
-
   width = parseInt(containerComputedStyle.width, 10);
   height = parseInt(window.getComputedStyle(containerEl).height, 10);
 
@@ -103,7 +99,7 @@ function init() {
     .y(function(d) {
       return yScale(d[yPropertyName]);
     })
-    .interpolate('basis');
+    .interpolate('cardinal');
 }
 
 function getMetricSets () {
@@ -255,11 +251,5 @@ function toggleYScale () {
   renderLines();
 }
 
-d3.json('data.json', function (resp) {
-  // TODO: literal, or func to define unique id
-  // TODO: literal to use for x-axis property name
-  // TODO: listeral y-axis unit specifier
-  datasets = resp;
-  init();
-  render();
-});
+init();
+render();
