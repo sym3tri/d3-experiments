@@ -22,6 +22,11 @@ http://www.khanacademy.org/math/trigonometry
 http://www.khanacademy.org/math/linear-algebra
 http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/
 http://fellinlovewithdata.com/guides/7-classic-foundational-vis-papers
+[Making things with math](https://www.youtube.com/watch?v=ONN3jBly364) - an excellent talk
+http://bost.ocks.org/mike/chart/
+[interasting api](http://polychartjs.com/#try) - for api reference/inspiration
+https://github.com/biovisualize/d3-charts-book
+http://nickqizhu.github.com/dc.js/ - for api reference/inspiration
 
 
 ## Potential Graph Features
