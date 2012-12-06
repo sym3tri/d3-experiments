@@ -251,5 +251,14 @@ function toggleYScale () {
   renderLines();
 }
 
+function adjustXScale (el) {
+  xScale.rangeRound([0, Math.round(drawWidth * el.value/100)]);
+  renderAxis();
+  graph.selectAll('.path-group path')
+    .attr({
+      'd': line
+    });
+}
+
 init();
 render();
