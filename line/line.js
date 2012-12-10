@@ -1,7 +1,7 @@
 var margin = {top: 20, right: 0, bottom: 30, left: 50},
     now = Date.now(),
     pollInterval = 300000,
-    axisColor = 'rgba(0, 0, 0, 0.5)',
+    axisColor = 'rgba(0, 0, 0, 0.3)',
     colorScale = d3.scale.category10(),
     xPropertyName = 'timestamp',
     yPropertyName = 'average',
@@ -176,10 +176,6 @@ function renderAxis() {
       .attr({
         'fill': 'none'
       });
-  yAxisGroup.selectAll('line')
-    .attr({
-      'fill': axisColor
-    });
   // update fonts
   yAxisGroup.selectAll('text')
       .attr({
