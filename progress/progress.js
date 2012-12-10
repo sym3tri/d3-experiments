@@ -115,7 +115,7 @@ function updateProgress() {
   advance(progress);
   if (progress === 1) {
     clearInterval(intervalId);
-    //fadeOut();
+    fadeOut();
   }
 }
 
