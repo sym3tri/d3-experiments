@@ -1,6 +1,6 @@
 var gData = [{
       'label': 'ping time',
-      'color': 'rgba(255, 0, 0, 0.5)',
+      'color': 'rgba(87, 214, 210, 0.5)',
       'xUnit': 's',
       'yUnit': 'ms',
       'data': [
@@ -119,7 +119,7 @@ points.data(data)
   .append('rect')
   .attr({
     width: barWidth,
-    fill: 'blue',
+    fill: 'rgba(87, 214, 210, 0.5)',
     height: function (d) { return yScale(d); },
     y: function (d) { return height - yScale(d); },
     x: function (d, i) { return xScale(i); }

@@ -34,11 +34,14 @@
       <br>
       <a href="javascript:imagify();">imagify</a>
       <br>
-      <input type="range" min="1" max="200" value="100" onchange="adjustXScale(this);" />
+      <p>
+        adjust x-scale<br>
+        <input type="range" min="1" max="200" value="100" onchange="adjustXScale(this);" />
+      </p>
     </div>
 
-    <script src="../d3.v2.js"></script>
-    <script src="../canvg.js"></script>
+    <script src="../lib/d3.v2.js"></script>
+    <script src="../lib/canvg.js"></script>
     <script src="data.js"></script>
     <script src="line.js"></script>
   </body>
