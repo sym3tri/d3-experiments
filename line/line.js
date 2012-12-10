@@ -63,12 +63,6 @@ function init() {
         'opacity': 0.8
       });
 
-  // group to contian the lines
-  graph.append('g')
-      .attr({
-        'class': 'path-group'
-      });
-
   axisAttrs = {
     'shape-rendering': 'crispEdges',
     'stroke-width': 1,
@@ -85,6 +79,12 @@ function init() {
       .attr({
         'class': 'y-axis'
         //'transform': 'translate(' + drawWidth + ')'
+      });
+
+  // group to contian the lines
+  graph.append('g')
+      .attr({
+        'class': 'path-group'
       });
 
   lineAttrs = {
@@ -165,8 +165,8 @@ function renderAxis() {
   if (!yAxis) {
     yAxis = d3.svg.axis()
         .scale(yScale)
-        //.tickSize(drawWidth)
-        //.tickPadding(10)
+        .tickSize(-drawWidth)
+        .tickPadding(10)
         .orient('left');
   }
   yAxisGroup = graph.select('.y-axis')
@@ -176,6 +176,10 @@ function renderAxis() {
       .attr({
         'fill': 'none'
       });
+  yAxisGroup.selectAll('line')
+    .attr({
+      'fill': axisColor
+    });
   // update fonts
   yAxisGroup.selectAll('text')
       .attr({
