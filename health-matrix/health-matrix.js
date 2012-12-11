@@ -56,7 +56,7 @@ function render() {
       height: rectWidth,
       'opacity': 0.8,
       'stroke': '#fff',
-      'stroke-width': 2,
+      'stroke-width': 1,
       'shape-rendering': 'crispEdges',
       fill: function (d) { return colors[states.indexOf(d.state)]; },
       x: function (d, i) { return getColIndex(d, i) * rectWidth; },
@@ -104,7 +104,7 @@ function startPoll() {
   intervalId = setInterval(function () {
     generateData(totalNodes);
     reRender();
-  }, 3000);
+  }, 4000);
 }
 
 function stopPoll() {
